@@ -14,7 +14,7 @@ def calc_average(input_list):
     print("calc_average")
     total=sum(input_list)
     count=len(input_list)
-    average=sum/len
+    average=total/count
     return average
 
 
@@ -33,12 +33,14 @@ def calc_median_temperature(input_list):
     sorted_list=sorted(input_list)
     n=len(input_list)
     if n%2==0:
-        median=sorted_list[n//2]
-    else:
         num1=sorted_list[n//2-1]
         num2=sorted_list[n//2]
         median=(num1+num2)/2
-        return median
+        
+        
+    else:
+         median=sorted_list[n//2]
+         return round (median)
 
 def main():
     print("ET0735(DeVops for AIoT)-Lab2-Introduction to Python")
